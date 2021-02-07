@@ -102,7 +102,7 @@ nav{
 
     .nav-links{
         
-        width:60%;
+        width:50%;
 
     }
 
@@ -110,11 +110,12 @@ nav{
 
 
 @media screen and (max-width:1180px){
+    
     .link{
         display:none;
     }
     .di{
-        display: inline-block;
+        display: block;
     }
     body{
         overflow-x: hidden;
@@ -123,14 +124,15 @@ nav{
        color: black !important;
        position: fixed;
        right:0px;
-       height:92vh;
-       top:8vh;
+       height:102vh; /* side bar er length control kore */
+       top:0vh; /*ei side bar er height e koto tuku space free korbe control kore */
        background-color: white;
        opacity: 1;
        display: flex;
        flex-direction: column;
        align-items: center;
        width: 25%;
+       
        transform: translateX(100%); 
        transition: transform 0.5s ease-in;
        z-index: 1;
@@ -139,11 +141,13 @@ nav{
         
    }
    .nav-links li{
+    
        opacity: 1;
    }
    .burger{
        display: block;
        margin-left: auto;
+       z-index: 1;
    }
 }
 @media screen and (max-width:768px){
@@ -156,18 +160,19 @@ nav{
     body{
         overflow-x: hidden;
     }
+    
    .nav-links{
        color: black !important;
-       position: fixed;
+       position:fixed;
        right:0px;
-       height:92vh;
-       top:8vh;
+       height:102vh;
+       top:0vh;
        background-color: white;
        opacity: 1;
        display: flex;
        flex-direction: column;
        align-items: center;
-       width: 80%;
+       width: 45%;
        transform: translateX(100%);
        transition: transform 0.5s ease-in; 
        z-index: 1;
@@ -181,6 +186,7 @@ nav{
    .burger{
        display: block;
        margin-left: auto;
+       
    }
 }
 .nav-active{
