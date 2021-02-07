@@ -132,6 +132,7 @@ nav{
        align-items: center;
        width: 25%;
        transform: translateX(100%); 
+       z-index: 1;
        /*screen theke sore jabe */
        /*time j nibe screen theke sorte*/ transition: transform 0.5 ease-in;
         
@@ -144,7 +145,42 @@ nav{
        margin-left: auto;
    }
 }
-
+@media screen and (max-width:768px){
+    .link{
+        display:none;
+    }
+    .di{
+        display: inline-block;
+    }
+    body{
+        overflow-x: hidden;
+    }
+   .nav-links{
+       color: black !important;
+       position: fixed;
+       right:0px;
+       height:92vh;
+       top:8vh;
+       background-color: white;
+       opacity: 1;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 50%;
+       transform: translateX(100%); 
+       z-index: 1;
+       /*screen theke sore jabe */
+       /*time j nibe screen theke sorte*/ transition: transform 0.5 ease-in;
+        
+   }
+   .nav-links li{
+       opacity: 1;
+   }
+   .burger{
+       display: block;
+       margin-left: auto;
+   }
+}
 .nav-active{
     transform: translateX(0%);
 }
